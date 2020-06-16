@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bison-Bold.ttf">
+            <string>Bison-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Book Core View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="firstPage" id="BYZ-38-t0r" customClass="BookCore_ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tjs-hz-PXa">
+                                <rect key="frame" x="0.0" y="-1" width="512" height="776"/>
+                                <subviews>
+                                    <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxU-C1-Aak">
+                                        <rect key="frame" x="0.0" y="0.0" width="512" height="776"/>
+                                    </skView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYQ-jZ-Zo6" customClass="EditableView" customModule="PlaygroundBook" customModuleProvider="target">
+                                        <rect key="frame" x="89.5" y="189" width="333" height="332.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="di3-pN-ZJx" customClass="BookCore_Graph02">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="332.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="di3-pN-ZJx" firstAttribute="leading" secondItem="ZYQ-jZ-Zo6" secondAttribute="leading" id="474-Rv-guc"/>
+                                            <constraint firstAttribute="width" secondItem="ZYQ-jZ-Zo6" secondAttribute="height" multiplier="1:1" id="95S-Oa-gSy"/>
+                                            <constraint firstAttribute="trailing" secondItem="di3-pN-ZJx" secondAttribute="trailing" id="9WF-j4-nTi"/>
+                                            <constraint firstAttribute="bottom" secondItem="di3-pN-ZJx" secondAttribute="bottom" id="ILQ-Z3-JOg"/>
+                                            <constraint firstItem="di3-pN-ZJx" firstAttribute="top" secondItem="ZYQ-jZ-Zo6" secondAttribute="top" id="WLg-3V-baP"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwO-WC-5i4" customClass="BookCore_RoundedView">
+                                        <rect key="frame" x="141" y="75" width="230" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C major" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-JH-lxv">
+                                                <rect key="frame" x="20" y="0.0" width="190" height="64"/>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="55"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cvf-JH-lxv" firstAttribute="leading" secondItem="mwO-WC-5i4" secondAttribute="leading" constant="20" id="3dq-TI-7QR"/>
+                                            <constraint firstItem="cvf-JH-lxv" firstAttribute="top" secondItem="mwO-WC-5i4" secondAttribute="top" id="RWC-vx-Thc"/>
+                                            <constraint firstAttribute="bottom" secondItem="cvf-JH-lxv" secondAttribute="bottom" id="TlD-YV-ZMF"/>
+                                            <constraint firstAttribute="width" secondItem="mwO-WC-5i4" secondAttribute="height" multiplier="145:40" id="cKH-PA-bmw"/>
+                                            <constraint firstAttribute="trailing" secondItem="cvf-JH-lxv" secondAttribute="trailing" constant="20" id="qp0-wv-v40"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sxU-C1-Aak" firstAttribute="centerX" secondItem="Tjs-hz-PXa" secondAttribute="centerX" id="5qZ-ka-Ya1"/>
+                                    <constraint firstItem="ZYQ-jZ-Zo6" firstAttribute="centerX" secondItem="Tjs-hz-PXa" secondAttribute="centerX" id="8yf-Hf-PQP"/>
+                                    <constraint firstItem="ZYQ-jZ-Zo6" firstAttribute="width" secondItem="Tjs-hz-PXa" secondAttribute="width" multiplier="0.65" id="IDu-BE-DxL"/>
+                                    <constraint firstItem="sxU-C1-Aak" firstAttribute="height" secondItem="Tjs-hz-PXa" secondAttribute="height" id="JDC-PA-INb"/>
+                                    <constraint firstItem="sxU-C1-Aak" firstAttribute="centerY" secondItem="Tjs-hz-PXa" secondAttribute="centerY" id="Vzc-xp-C3N"/>
+                                    <constraint firstItem="mwO-WC-5i4" firstAttribute="centerX" secondItem="Tjs-hz-PXa" secondAttribute="centerX" id="Xhg-wR-Oe4"/>
+                                    <constraint firstItem="mwO-WC-5i4" firstAttribute="top" secondItem="Tjs-hz-PXa" secondAttribute="top" constant="75" id="e4f-kd-Yvr"/>
+                                    <constraint firstItem="ZYQ-jZ-Zo6" firstAttribute="top" secondItem="mwO-WC-5i4" secondAttribute="bottom" constant="50" id="hCb-Aq-waK"/>
+                                    <constraint firstItem="mwO-WC-5i4" firstAttribute="width" secondItem="Tjs-hz-PXa" secondAttribute="width" multiplier="0.45" id="kgk-X9-oqY"/>
+                                    <constraint firstItem="sxU-C1-Aak" firstAttribute="width" secondItem="Tjs-hz-PXa" secondAttribute="width" id="sAR-xB-3d3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BI-Xf-LhM" customClass="BookCore_CircleButton">
+                                <rect key="frame" x="89.5" y="570.5" width="333" height="50"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.90196078430000004" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Start sound">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="StartStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNb-Lk-cHt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tjs-hz-PXa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="4Kp-4c-sZd"/>
+                            <constraint firstItem="Tjs-hz-PXa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A1f-4j-wUu"/>
+                            <constraint firstItem="Tjs-hz-PXa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.995" id="B6A-KL-5sQ"/>
+                            <constraint firstItem="Tjs-hz-PXa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.01" id="FOi-dl-vl4"/>
+                            <constraint firstItem="3BI-Xf-LhM" firstAttribute="centerX" secondItem="ZYQ-jZ-Zo6" secondAttribute="centerX" id="Ozh-43-RJ4"/>
+                            <constraint firstItem="3BI-Xf-LhM" firstAttribute="width" secondItem="ZYQ-jZ-Zo6" secondAttribute="width" id="cLo-Jl-vQW"/>
+                            <constraint firstItem="3BI-Xf-LhM" firstAttribute="height" secondItem="ZYQ-jZ-Zo6" secondAttribute="height" multiplier="0.15" id="hvF-kq-mhX"/>
+                            <constraint firstItem="3BI-Xf-LhM" firstAttribute="top" secondItem="ZYQ-jZ-Zo6" secondAttribute="bottom" constant="50" id="pCu-9R-RVI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="512" height="768"/>
+                    <connections>
+                        <outlet property="graph" destination="di3-pN-ZJx" id="G7L-kX-lOa"/>
+                        <outlet property="intensityLabel" destination="cvf-JH-lxv" id="du8-Hn-8Nt"/>
+                        <outlet property="roundedBorderView" destination="mwO-WC-5i4" id="ddz-Iy-KhO"/>
+                        <outlet property="sceneView" destination="sxU-C1-Aak" id="rJW-bg-kS4"/>
+                        <outlet property="startStop" destination="3BI-Xf-LhM" id="yOy-bj-hkG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
+        </scene>
+        <!--Third Page-->
+        <scene sceneID="snI-fo-7W5">
+            <objects>
+                <viewController storyboardIdentifier="secondPage" modalPresentationStyle="fullScreen" id="Ltx-yr-eNT" customClass="BookCore_NotesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HkQ-8R-NfM">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOb-ZM-LHj">
+                                <rect key="frame" x="0.0" y="1.5" width="512" height="775"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-Sz-OS8" customClass="BookCore_RoundedView">
+                                        <rect key="frame" x="141" y="75" width="230" height="63.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hertz" textAlignment="justified" lineBreakMode="tailTruncation" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="GwI-U9-0Ya">
+                                                <rect key="frame" x="100" y="1" width="124.5" height="61.5"/>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="65"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="440" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="t4A-n8-JKh">
+                                                <rect key="frame" x="8" y="1" width="82" height="61.5"/>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="65"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7bb-Sz-OS8" secondAttribute="height" multiplier="145:40" id="5Xf-x6-EIb"/>
+                                            <constraint firstItem="GwI-U9-0Ya" firstAttribute="leading" secondItem="t4A-n8-JKh" secondAttribute="trailing" constant="10" id="7O7-ah-B4m"/>
+                                            <constraint firstItem="GwI-U9-0Ya" firstAttribute="leading" secondItem="7bb-Sz-OS8" secondAttribute="centerX" constant="-15" id="Idu-mV-oJg"/>
+                                            <constraint firstItem="t4A-n8-JKh" firstAttribute="centerY" secondItem="7bb-Sz-OS8" secondAttribute="centerY" id="POV-2o-STS"/>
+                                            <constraint firstItem="GwI-U9-0Ya" firstAttribute="height" secondItem="t4A-n8-JKh" secondAttribute="height" id="R35-g2-iAB"/>
+                                            <constraint firstItem="GwI-U9-0Ya" firstAttribute="centerY" secondItem="t4A-n8-JKh" secondAttribute="centerY" id="ZP8-b0-bij"/>
+                                            <constraint firstItem="t4A-n8-JKh" firstAttribute="top" secondItem="7bb-Sz-OS8" secondAttribute="top" constant="1" id="oxP-73-nLi"/>
+                                            <constraint firstAttribute="bottom" secondItem="t4A-n8-JKh" secondAttribute="bottom" constant="1" id="xaJ-7b-8wc"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkP-yt-jhG" customClass="BookCore_EditableView">
+                                        <rect key="frame" x="89.5" y="178.5" width="333" height="332.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Di2-md-wLm" customClass="BookCore_GraphView">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="332.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kkP-yt-jhG" secondAttribute="height" multiplier="1:1" id="RaS-xq-Idy"/>
+                                            <constraint firstItem="Di2-md-wLm" firstAttribute="width" secondItem="kkP-yt-jhG" secondAttribute="width" id="eta-yW-Qpb"/>
+                                            <constraint firstItem="Di2-md-wLm" firstAttribute="centerX" secondItem="kkP-yt-jhG" secondAttribute="centerX" id="mHw-XE-QC8"/>
+                                            <constraint firstItem="Di2-md-wLm" firstAttribute="centerY" secondItem="kkP-yt-jhG" secondAttribute="centerY" id="wFv-qu-Pdo"/>
+                                            <constraint firstItem="Di2-md-wLm" firstAttribute="height" secondItem="kkP-yt-jhG" secondAttribute="height" id="ytU-JA-Fz2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ER6-A0-mgY">
+                                        <rect key="frame" x="89.5" y="561" width="333" height="177.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-YV-ItK" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="-9.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.54117647059999996" green="0.75686274509999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XYd-YV-ItK" secondAttribute="height" multiplier="1:1" id="PSC-Fk-gJT"/>
+                                                    <constraint firstAttribute="height" constant="75" id="a0Y-DN-0Kf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.15686274510000001" green="0.50588235290000005" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SelectNote:" destination="Ltx-yr-eNT" eventType="touchUpInside" id="D59-MH-H0e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9U-xH-Mdd" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="82.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.54117647059999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="d9U-xH-Mdd" secondAttribute="height" multiplier="1:1" id="kgo-K9-EsY"/>
+                                                    <constraint firstAttribute="height" constant="75" id="kke-5k-9ga"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SelectNote:" destination="Ltx-yr-eNT" eventType="touchUpInside" id="q4z-Cd-9S5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvZ-f5-Mux" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="175.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.84705882349999995" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="i9o-AO-pgA"/>
+                                                    <constraint firstAttribute="width" secondItem="jvZ-f5-Mux" secondAttribute="height" multiplier="1:1" id="s4x-EG-V97"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SelectNote:" destination="Ltx-yr-eNT" eventType="touchUpInside" id="pqG-nl-zqU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdu-Y9-r4D" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="267.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.54117647059999996" green="0.90196078430000004" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pdu-Y9-r4D" secondAttribute="height" multiplier="1:1" id="br4-zO-KQs"/>
+                                                    <constraint firstAttribute="height" constant="75" id="t39-3I-nnC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SelectNote:" destination="Ltx-yr-eNT" eventType="touchUpInside" id="gmw-p4-TaD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afS-45-uhW" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="129" y="92" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="afS-45-uhW" secondAttribute="height" multiplier="1:1" id="pUc-FQ-qDZ"/>
+                                                    <constraint firstAttribute="height" constant="75" id="sAm-ND-6gF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SelectNote:" destination="Ltx-yr-eNT" eventType="touchUpInside" id="YYx-zT-KAh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhc-bx-4Tb" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="37" y="92" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.63137254899999995" green="0.54117647059999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Qhc-bx-4Tb" secondAttribute="height" multiplier="1:1" id="8o6-ya-4d0"/>
+                                                    <constraint firstAttribute="height" constant="75" id="oLa-Oa-CWr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SelectNote:" destination="Ltx-yr-eNT" eventType="touchUpInside" id="xHq-IC-Omu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-sm-Lnf" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="221" y="92" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.64705882349999999" green="0.90196078430000004" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="LuS-w1-mHX"/>
+                                                    <constraint firstAttribute="width" secondItem="8BI-sm-Lnf" secondAttribute="height" multiplier="1:1" id="yjF-MG-mie"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SelectNote:" destination="Ltx-yr-eNT" eventType="touchUpInside" id="hnF-me-bSw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="d9U-xH-Mdd" firstAttribute="leading" secondItem="XYd-YV-ItK" secondAttribute="trailing" constant="17" id="8cK-wS-sfg"/>
+                                            <constraint firstItem="Qhc-bx-4Tb" firstAttribute="centerY" secondItem="afS-45-uhW" secondAttribute="centerY" id="9UA-bk-i2q"/>
+                                            <constraint firstItem="pdu-Y9-r4D" firstAttribute="leading" secondItem="jvZ-f5-Mux" secondAttribute="trailing" constant="17" id="9ta-nO-Vw3"/>
+                                            <constraint firstItem="jvZ-f5-Mux" firstAttribute="top" secondItem="ER6-A0-mgY" secondAttribute="top" id="BDv-Oy-EpI"/>
+                                            <constraint firstItem="d9U-xH-Mdd" firstAttribute="trailing" secondItem="ER6-A0-mgY" secondAttribute="centerX" constant="-9" id="C1T-Fd-bjE"/>
+                                            <constraint firstItem="afS-45-uhW" firstAttribute="top" secondItem="d9U-xH-Mdd" secondAttribute="bottom" constant="17" id="D78-YS-QIn"/>
+                                            <constraint firstAttribute="width" secondItem="ER6-A0-mgY" secondAttribute="height" multiplier="15:8" id="DDd-Ub-eh8"/>
+                                            <constraint firstItem="afS-45-uhW" firstAttribute="centerX" secondItem="ER6-A0-mgY" secondAttribute="centerX" id="Nbr-TT-yxU"/>
+                                            <constraint firstItem="afS-45-uhW" firstAttribute="centerY" secondItem="8BI-sm-Lnf" secondAttribute="centerY" id="R8i-VI-OGu"/>
+                                            <constraint firstItem="afS-45-uhW" firstAttribute="leading" secondItem="Qhc-bx-4Tb" secondAttribute="trailing" constant="17" id="Xoz-Yr-Wke"/>
+                                            <constraint firstItem="8BI-sm-Lnf" firstAttribute="leading" secondItem="afS-45-uhW" secondAttribute="trailing" constant="17" id="htz-uz-njL"/>
+                                            <constraint firstItem="jvZ-f5-Mux" firstAttribute="leading" secondItem="d9U-xH-Mdd" secondAttribute="trailing" constant="18" id="iSq-eo-Rj1"/>
+                                            <constraint firstItem="XYd-YV-ItK" firstAttribute="top" secondItem="ER6-A0-mgY" secondAttribute="top" id="j6z-U5-j2P"/>
+                                            <constraint firstItem="pdu-Y9-r4D" firstAttribute="top" secondItem="ER6-A0-mgY" secondAttribute="top" id="kWc-DN-SYr"/>
+                                            <constraint firstItem="d9U-xH-Mdd" firstAttribute="top" secondItem="ER6-A0-mgY" secondAttribute="top" id="zAa-b8-me7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="kkP-yt-jhG" firstAttribute="width" secondItem="BOb-ZM-LHj" secondAttribute="width" multiplier="0.65" id="0cY-UQ-kzv"/>
+                                    <constraint firstItem="ER6-A0-mgY" firstAttribute="top" secondItem="kkP-yt-jhG" secondAttribute="bottom" constant="50" id="AVH-LG-X2s"/>
+                                    <constraint firstItem="kkP-yt-jhG" firstAttribute="centerX" secondItem="BOb-ZM-LHj" secondAttribute="centerX" id="OQy-Hx-h2s"/>
+                                    <constraint firstItem="ER6-A0-mgY" firstAttribute="centerX" secondItem="BOb-ZM-LHj" secondAttribute="centerX" id="P3e-ly-ulV"/>
+                                    <constraint firstItem="7bb-Sz-OS8" firstAttribute="width" secondItem="BOb-ZM-LHj" secondAttribute="width" multiplier="0.45" id="Uzu-aw-E3j"/>
+                                    <constraint firstItem="ER6-A0-mgY" firstAttribute="width" secondItem="kkP-yt-jhG" secondAttribute="width" id="fyh-zu-6fQ"/>
+                                    <constraint firstItem="kkP-yt-jhG" firstAttribute="top" secondItem="7bb-Sz-OS8" secondAttribute="bottom" constant="40" id="gNc-l6-91U"/>
+                                    <constraint firstItem="7bb-Sz-OS8" firstAttribute="centerX" secondItem="BOb-ZM-LHj" secondAttribute="centerX" id="rKH-fo-H30"/>
+                                    <constraint firstItem="7bb-Sz-OS8" firstAttribute="top" secondItem="BOb-ZM-LHj" secondAttribute="top" constant="75" id="x4i-76-lRb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BOb-ZM-LHj" firstAttribute="width" secondItem="HkQ-8R-NfM" secondAttribute="width" id="Il8-Bf-uc3"/>
+                            <constraint firstItem="BOb-ZM-LHj" firstAttribute="centerX" secondItem="6IV-tN-b8R" secondAttribute="centerX" id="YXb-Du-eqf"/>
+                            <constraint firstItem="BOb-ZM-LHj" firstAttribute="centerY" secondItem="6IV-tN-b8R" secondAttribute="centerY" id="eGO-y1-hSF"/>
+                            <constraint firstItem="BOb-ZM-LHj" firstAttribute="height" secondItem="HkQ-8R-NfM" secondAttribute="height" multiplier="1.00949" id="oAJ-DT-IOL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6IV-tN-b8R"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third Page" id="tCA-rh-D7F"/>
+                    <navigationItem key="navigationItem" id="Y2T-bW-MTT"/>
+                    <size key="freeformSize" width="512" height="768"/>
+                    <connections>
+                        <outlet property="CurvesFrame" destination="kkP-yt-jhG" id="bkz-Eg-zbz"/>
+                        <outlet property="botaoDoComeco" destination="XYd-YV-ItK" id="IgM-Hw-sIe"/>
+                        <outlet property="frequencyLabel" destination="t4A-n8-JKh" id="ZdC-qK-qF3"/>
+                        <outlet property="graph" destination="Di2-md-wLm" id="OCM-jQ-qbw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVH-8y-Zfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029" y="108"/>
+        </scene>
+        <!--Fourth Page-->
+        <scene sceneID="ors-1A-cnX">
+            <objects>
+                <viewController storyboardIdentifier="thirdPage" modalPresentationStyle="fullScreen" id="ahH-gu-FHn" customClass="BookCore_ChordsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1u-CW-7Dx">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeB-0R-fuk">
+                                <rect key="frame" x="0.0" y="-0.5" width="512" height="775"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="30x-7Z-Kui">
+                                        <rect key="frame" x="0.0" y="75" width="512" height="63.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="100" minimumInteritemSpacing="20" id="sCd-24-hNg">
+                                            <size key="itemSize" width="151" height="54"/>
+                                            <size key="estimatedItemSize" width="151" height="54"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chordsName" id="2vF-q3-MXc" customClass="BookCore_ChordsCollectionViewCell">
+                                                <rect key="frame" x="20" y="5" width="151" height="54"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLj-E1-MZv">
+                                                            <rect key="frame" x="54.5" y="17" width="42" height="20.5"/>
+                                                            <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="40"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="dLj-E1-MZv" firstAttribute="centerX" secondItem="2vF-q3-MXc" secondAttribute="centerX" id="Dm5-oJ-F2s"/>
+                                                    <constraint firstItem="dLj-E1-MZv" firstAttribute="centerY" secondItem="2vF-q3-MXc" secondAttribute="centerY" id="FfR-P2-fzT"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="chordsName" destination="dLj-E1-MZv" id="9Bl-Aj-vg7"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <view userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTF-Xl-R8j" customClass="BookCore_RoundedView">
+                                        <rect key="frame" x="141" y="75" width="230" height="63.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CTF-Xl-R8j" secondAttribute="height" multiplier="145:40" id="Njg-Hu-1wd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKf-ie-Ofj" customClass="BookCore_EditableView">
+                                        <rect key="frame" x="89.5" y="178.5" width="333" height="333"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-56-beZ" customClass="BookCore_NewGraphView">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="333"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="EM5-56-beZ" firstAttribute="height" secondItem="JKf-ie-Ofj" secondAttribute="height" id="L9k-7x-Z27"/>
+                                            <constraint firstAttribute="width" secondItem="JKf-ie-Ofj" secondAttribute="height" multiplier="1:1" id="MbF-8K-aCY"/>
+                                            <constraint firstItem="EM5-56-beZ" firstAttribute="width" secondItem="JKf-ie-Ofj" secondAttribute="width" id="Nln-aA-8sz"/>
+                                            <constraint firstItem="EM5-56-beZ" firstAttribute="centerY" secondItem="JKf-ie-Ofj" secondAttribute="centerY" id="PcP-i3-p79"/>
+                                            <constraint firstItem="EM5-56-beZ" firstAttribute="centerX" secondItem="JKf-ie-Ofj" secondAttribute="centerX" id="vFt-vN-Odd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidht">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knN-fO-UKO">
+                                        <rect key="frame" x="89.5" y="561.5" width="333" height="177.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-BU-ybF" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="-9.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.54117647059999996" green="0.75686274509999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MOr-BU-ybF" secondAttribute="height" multiplier="1:1" id="7Da-mH-zLb"/>
+                                                    <constraint firstAttribute="height" constant="75" id="DTm-0u-Apc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tocaNota:" destination="ahH-gu-FHn" eventType="touchUpInside" id="QVq-en-WWb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-HR-Fvb" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="175.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.84705882349999995" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="AAp-HR-Fvb" secondAttribute="height" multiplier="1:1" id="9To-4f-mQ8"/>
+                                                    <constraint firstAttribute="height" constant="75" id="lzg-gX-OeD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tocaNota:" destination="ahH-gu-FHn" eventType="touchUpInside" id="Ape-IK-UwB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eV-kB-EKt" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="267.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.54117647059999996" green="0.90196078430000004" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="KuH-gj-Piw"/>
+                                                    <constraint firstAttribute="width" secondItem="5eV-kB-EKt" secondAttribute="height" multiplier="1:1" id="YoN-GE-PLk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tocaNota:" destination="ahH-gu-FHn" eventType="touchUpInside" id="8Ya-Hk-2lp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTv-ii-9Jv" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="129" y="92" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="HTv-ii-9Jv" secondAttribute="height" multiplier="1:1" id="hLS-th-qdK"/>
+                                                    <constraint firstAttribute="height" constant="75" id="y2K-8B-liE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tocaNota:" destination="ahH-gu-FHn" eventType="touchUpInside" id="4Pa-KU-hQk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFm-ea-jYl" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="37" y="92" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.63137254899999995" green="0.54117647059999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MFm-ea-jYl" secondAttribute="height" multiplier="1:1" id="JhO-gK-gMP"/>
+                                                    <constraint firstAttribute="height" constant="75" id="ykw-Vt-P84"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tocaNota:" destination="ahH-gu-FHn" eventType="touchUpInside" id="j0L-1l-nHB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaN-Cj-g0W" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="221" y="92" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.64705882349999999" green="0.90196078430000004" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BaN-Cj-g0W" secondAttribute="height" multiplier="1:1" id="kxZ-2h-et1"/>
+                                                    <constraint firstAttribute="height" constant="75" id="v5y-vv-mjb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tocaNota:" destination="ahH-gu-FHn" eventType="touchUpInside" id="MEL-Ri-Q8e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOO-25-sbL" customClass="BookCore_CircleButton">
+                                                <rect key="frame" x="82.5" y="0.0" width="75" height="75"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.54117647059999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OOO-25-sbL" secondAttribute="height" multiplier="1:1" id="8G5-CS-wlb"/>
+                                                    <constraint firstAttribute="height" constant="75" id="HcJ-cT-dry"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Bison-Bold" family="Bison" pointSize="45"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tocaNota:" destination="ahH-gu-FHn" eventType="touchUpInside" id="d59-Mw-tWD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="MOr-BU-ybF" firstAttribute="top" secondItem="knN-fO-UKO" secondAttribute="top" id="2YU-uq-Gad"/>
+                                            <constraint firstItem="BaN-Cj-g0W" firstAttribute="leading" secondItem="HTv-ii-9Jv" secondAttribute="trailing" constant="17" id="EiM-ba-5ZN"/>
+                                            <constraint firstItem="HTv-ii-9Jv" firstAttribute="centerY" secondItem="BaN-Cj-g0W" secondAttribute="centerY" id="Gbm-BU-hOY"/>
+                                            <constraint firstAttribute="width" secondItem="knN-fO-UKO" secondAttribute="height" multiplier="15:8" id="IVJ-Zw-HjT"/>
+                                            <constraint firstItem="AAp-HR-Fvb" firstAttribute="leading" secondItem="OOO-25-sbL" secondAttribute="trailing" constant="18" id="IW2-WP-4db"/>
+                                            <constraint firstItem="HTv-ii-9Jv" firstAttribute="centerX" secondItem="knN-fO-UKO" secondAttribute="centerX" id="JVq-ke-Dzz"/>
+                                            <constraint firstItem="AAp-HR-Fvb" firstAttribute="top" secondItem="knN-fO-UKO" secondAttribute="top" id="JZ8-i3-LUU"/>
+                                            <constraint firstItem="OOO-25-sbL" firstAttribute="top" secondItem="knN-fO-UKO" secondAttribute="top" id="N0K-ee-qQs"/>
+                                            <constraint firstItem="OOO-25-sbL" firstAttribute="trailing" secondItem="knN-fO-UKO" secondAttribute="centerX" constant="-9" id="SRh-sz-D0a"/>
+                                            <constraint firstItem="5eV-kB-EKt" firstAttribute="top" secondItem="knN-fO-UKO" secondAttribute="top" id="Tr0-Au-nWC"/>
+                                            <constraint firstItem="OOO-25-sbL" firstAttribute="leading" secondItem="MOr-BU-ybF" secondAttribute="trailing" constant="17" id="Uhx-Cw-bjd"/>
+                                            <constraint firstItem="HTv-ii-9Jv" firstAttribute="leading" secondItem="MFm-ea-jYl" secondAttribute="trailing" constant="17" id="a1W-Wh-ZSS"/>
+                                            <constraint firstItem="HTv-ii-9Jv" firstAttribute="top" secondItem="OOO-25-sbL" secondAttribute="bottom" constant="17" id="f7Y-Ow-UlS"/>
+                                            <constraint firstItem="MFm-ea-jYl" firstAttribute="centerY" secondItem="HTv-ii-9Jv" secondAttribute="centerY" id="nZc-5f-Rvf"/>
+                                            <constraint firstItem="5eV-kB-EKt" firstAttribute="leading" secondItem="AAp-HR-Fvb" secondAttribute="trailing" constant="17" id="rDQ-BJ-eXA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="knN-fO-UKO" firstAttribute="width" secondItem="JKf-ie-Ofj" secondAttribute="width" id="1DQ-ph-dL0"/>
+                                    <constraint firstItem="JKf-ie-Ofj" firstAttribute="top" secondItem="CTF-Xl-R8j" secondAttribute="bottom" constant="40" id="5za-yN-zjf"/>
+                                    <constraint firstItem="JKf-ie-Ofj" firstAttribute="centerX" secondItem="HeB-0R-fuk" secondAttribute="centerX" id="Iol-g0-Eom"/>
+                                    <constraint firstItem="CTF-Xl-R8j" firstAttribute="width" secondItem="HeB-0R-fuk" secondAttribute="width" multiplier="0.45" id="KGZ-01-5Vx"/>
+                                    <constraint firstItem="30x-7Z-Kui" firstAttribute="width" secondItem="HeB-0R-fuk" secondAttribute="width" id="LwU-iG-cYt"/>
+                                    <constraint firstItem="CTF-Xl-R8j" firstAttribute="top" secondItem="HeB-0R-fuk" secondAttribute="top" constant="75" id="MLQ-KA-HWo"/>
+                                    <constraint firstItem="30x-7Z-Kui" firstAttribute="height" secondItem="CTF-Xl-R8j" secondAttribute="height" id="NUU-dv-BAx"/>
+                                    <constraint firstItem="JKf-ie-Ofj" firstAttribute="width" secondItem="HeB-0R-fuk" secondAttribute="width" multiplier="0.65" id="S6d-rd-HiO"/>
+                                    <constraint firstItem="knN-fO-UKO" firstAttribute="top" secondItem="JKf-ie-Ofj" secondAttribute="bottom" constant="50" id="VHb-2S-68y"/>
+                                    <constraint firstItem="knN-fO-UKO" firstAttribute="centerX" secondItem="JKf-ie-Ofj" secondAttribute="centerX" id="dXs-zp-awK"/>
+                                    <constraint firstItem="30x-7Z-Kui" firstAttribute="centerX" secondItem="HeB-0R-fuk" secondAttribute="centerX" id="gFj-of-4bA"/>
+                                    <constraint firstItem="30x-7Z-Kui" firstAttribute="centerY" secondItem="CTF-Xl-R8j" secondAttribute="centerY" id="qZU-gz-wOn"/>
+                                    <constraint firstItem="CTF-Xl-R8j" firstAttribute="centerX" secondItem="HeB-0R-fuk" secondAttribute="centerX" id="wzY-rt-EBU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HeB-0R-fuk" firstAttribute="centerY" secondItem="7J8-xg-sde" secondAttribute="centerY" multiplier="0.995" id="S5C-oO-sgf"/>
+                            <constraint firstItem="HeB-0R-fuk" firstAttribute="height" secondItem="B1u-CW-7Dx" secondAttribute="height" multiplier="1.00949" id="UjD-Kd-tDI"/>
+                            <constraint firstItem="HeB-0R-fuk" firstAttribute="centerX" secondItem="7J8-xg-sde" secondAttribute="centerX" id="l2o-UV-rhW"/>
+                            <constraint firstItem="HeB-0R-fuk" firstAttribute="width" secondItem="B1u-CW-7Dx" secondAttribute="width" id="mkB-bZ-rXs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7J8-xg-sde"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fourth Page" id="GsT-nk-IYV"/>
+                    <navigationItem key="navigationItem" id="UWG-Wp-Q8q"/>
+                    <size key="freeformSize" width="512" height="768"/>
+                    <connections>
+                        <outlet property="CurvesFrame" destination="JKf-ie-Ofj" id="S0b-1e-jMe"/>
+                        <outlet property="chordsNameCollectionView" destination="30x-7Z-Kui" id="r9Q-CG-K5k"/>
+                        <outlet property="graph" destination="EM5-56-beZ" id="haW-kJ-lQi"/>
+                        <outlet property="roundedView" destination="CTF-Xl-R8j" id="vVR-8B-cus"/>
+                        <outletCollection property="botoes" destination="MOr-BU-ybF" collectionClass="NSMutableArray" id="xP8-4n-mUf"/>
+                        <outletCollection property="botoes" destination="OOO-25-sbL" collectionClass="NSMutableArray" id="neF-Gb-hIe"/>
+                        <outletCollection property="botoes" destination="AAp-HR-Fvb" collectionClass="NSMutableArray" id="Yyn-GH-eGn"/>
+                        <outletCollection property="botoes" destination="5eV-kB-EKt" collectionClass="NSMutableArray" id="B28-ic-Sku"/>
+                        <outletCollection property="botoes" destination="MFm-ea-jYl" collectionClass="NSMutableArray" id="Uz1-Ah-GgP"/>
+                        <outletCollection property="botoes" destination="HTv-ii-9Jv" collectionClass="NSMutableArray" id="Wcj-zW-OyH"/>
+                        <outletCollection property="botoes" destination="BaN-Cj-g0W" collectionClass="NSMutableArray" id="kxN-as-Vvk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jM5-XK-t8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3062" y="108"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fcD-sv-Xiz">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Book Core Live View Controller-->
+        <scene sceneID="HVS-ZB-wEb">
+            <objects>
+                <viewController storyboardIdentifier="preview" id="fcD-sv-Xiz" customClass="BookCore_LiveViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rh2-0a-zph">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CaK-C9-BMf">
+                                <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDF-xY-wba">
+                                <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U8U-Ul-2oZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="t8o-Dc-2xN">
+                                            <rect key="frame" x="179" y="307" width="154" height="154"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                            </accessibility>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="t8o-Dc-2xN" secondAttribute="height" multiplier="1:1" id="el2-zd-cM8"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="t8o-Dc-2xN" firstAttribute="centerX" secondItem="U8U-Ul-2oZ" secondAttribute="centerX" id="6TN-CG-Jmt"/>
+                                        <constraint firstItem="t8o-Dc-2xN" firstAttribute="centerY" secondItem="U8U-Ul-2oZ" secondAttribute="centerY" id="9g1-8c-iEU"/>
+                                        <constraint firstItem="t8o-Dc-2xN" firstAttribute="width" secondItem="U8U-Ul-2oZ" secondAttribute="width" multiplier="0.3" id="eU0-QV-Ohq"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dDF-xY-wba" firstAttribute="height" secondItem="qaR-nP-dw0" secondAttribute="height" id="ClU-lG-DZj"/>
+                            <constraint firstItem="dDF-xY-wba" firstAttribute="centerX" secondItem="qaR-nP-dw0" secondAttribute="centerX" id="Imm-yj-8pJ"/>
+                            <constraint firstItem="dDF-xY-wba" firstAttribute="centerY" secondItem="qaR-nP-dw0" secondAttribute="centerY" id="Nkj-OC-dFB"/>
+                            <constraint firstItem="CaK-C9-BMf" firstAttribute="centerY" secondItem="qaR-nP-dw0" secondAttribute="centerY" id="mOY-Li-8SJ"/>
+                            <constraint firstItem="CaK-C9-BMf" firstAttribute="height" secondItem="qaR-nP-dw0" secondAttribute="height" id="pgF-nU-Bs2"/>
+                            <constraint firstItem="dDF-xY-wba" firstAttribute="width" secondItem="qaR-nP-dw0" secondAttribute="width" id="sAe-P8-QEK"/>
+                            <constraint firstItem="CaK-C9-BMf" firstAttribute="centerX" secondItem="qaR-nP-dw0" secondAttribute="centerX" id="vNM-5W-0Fi"/>
+                            <constraint firstItem="CaK-C9-BMf" firstAttribute="width" secondItem="qaR-nP-dw0" secondAttribute="width" id="wzP-3r-PKR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qaR-nP-dw0"/>
+                    </view>
+                    <size key="freeformSize" width="512" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvi-wC-fap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="512.5" height="768.5"/>
+        <image name="icon" width="247" height="246.5"/>
+    </resources>
+</document>
